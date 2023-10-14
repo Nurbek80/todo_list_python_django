@@ -1,0 +1,12 @@
+
+{% extends "todo/main.html" %}
+{% block content %}
+
+<h1>Task Form</h1>
+<form method="POST" action="">
+  {% csrf_token %}
+  <a href="{% url 'tasks'%}">Go Back</a>
+  {{form.as_p}}
+  <input type="submit" value="Submit" />
+</form>
+{% endblock content %}
